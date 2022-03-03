@@ -61,7 +61,7 @@ export class UserRepository {
           throw new NotFoundException('Password is wrong');
         }
       })
-      .catch((err) => {
+      .catch(() => {
         throw new NotFoundException('User not found');
       });
   }
